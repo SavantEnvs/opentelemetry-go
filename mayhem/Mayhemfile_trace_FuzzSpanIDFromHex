@@ -1,0 +1,9 @@
+project: savantenvs/opentelemetry-go
+target: trace-fuzzspanidfromhex
+
+cmds:
+  - cmd: /mayhem/trace_FuzzSpanIDFromHex
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/trace-fuzzspanidfromhex/testsuite

@@ -1,0 +1,9 @@
+project: savantenvs/opentelemetry-go
+target: sdk-attribute-fuzzhashkvs
+
+cmds:
+  - cmd: /mayhem/sdk_attribute_FuzzHashKVs
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sdk-attribute-fuzzhashkvs/testsuite
